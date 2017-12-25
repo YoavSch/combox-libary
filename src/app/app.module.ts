@@ -3,16 +3,22 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
-
+import {ComboxModule} from "./module/combox/combox.module";
+import {CommonModule} from "@angular/common";
+import {DataService} from "./data.service";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
-    BrowserModule
+    HttpClientModule,
+    CommonModule,
+    BrowserModule,
+    ComboxModule
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
